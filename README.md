@@ -14,36 +14,154 @@
   - Database: SQL Server
 + Mã nguồn: [https://github.com/thanqphan/3TN_SHOP](https://github.com/thanqphan/3TN_SHOP)
 # Mục lục
-- [Tổng quan](#tổng-quan).
-- [Mục lục](#mục-lục).
-- Khảo sát hiện trạng.
-- 1. Khảo sát hiện trạng.
--  2. xác định yêu cầu.
+- [Tổng quan](#tổng-quan)
+- [Mục lục](#mục-lục)
+- Khảo sát hiện trạng
+- 1. [Khảo sát hiện trạng](#1-khảo-sát-hiện-trạng)
+- 2. xác định yêu cầu
 # 1. Khảo sát hiện trạng.
 ## 1.1. Khảo sát hiện trạng.
 ### 1.1.1. Hiện trạng tổ chức.
-
+- Cơ cấu tổ chức của Cửa hàng: với quy mô cửa hàng nhỏ chuyên cung cấp các mặt hàng thời trang theo xu thế và yêu cầu của khách hàng.
+  ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/Hientrangtochuc.png).
+-	Gồm 4 bộ phận với vai trò riêng – không ảnh hưởng đến nhau:
+    +	Bộ phận Quản lý: quản lý toàn bộ cửa hàng – mọi nghiệp vụ dưới quyền. Chịu trách nhiệm phân chia công việc đặc thù cho các bộ phận dưới quyền mình.
+    +	Bộ phận Thủ kho: quản lý kho tại của hàng. Nhập hàng, trả hàng và cập nhật thông tin sản phẩm. Thống kê tồn Kho của sản phẩm nếu được yêu cầu.
+    +	Bộ phận Thu Ngân: quản lý tại quầy thu ngân. Lập hóa đơn, thanh toán cho khách – trả sản phẩm nếu có. Thống kê Doanh thu của cửa hàng theo mốc thời gian được yêu cầu.
+    +	Bộ phận Phục vụ: nhận nhiệm vụ tiếp khách, tư vấn và mang hàng đến quầy thu ngân để thanh toán.
 ### 1.1.2. Hiện trạng nghiệp vụ.
+-	Các hoạt động nghiệp vụ được tóm tắt như sau:
+    +	Cửa hàng nhập hàng từ Nhà cung cấp thông qua Phiếu nhập từ bộ phân kho thống kê khi kiểm tra lại mặt hàng tồn trong kho hàng.
+    +	Mặt hàng được cập nhật các thông tin cơ bản bởi bộ phân kho để có thể cập nhật thông tin nhanh chóng cho bộ phận thu ngân.
+    +	Phần mềm được sử dụng bởi Quản lý, Thu ngân và Thủ kho. Mỗi nhân viên có chức vụ này sẽ được Quản lý cấp tài khoản và mật khẩu tương ứng để đăng nhập vô hệ thống.
+    +	Mỗi nhân viên tại của hàng sẽ được cập nhật thông tin như tên, tuổi, ngày sinh, chức vụ… đầy đủ trên hệ thống để tiện chỉnh sửa thông tin.
+    +	Khi thanh toán, hóa đơn của khách hàng khi đặt ngưỡng thanh toán để tính điểm sẽ được lưu lại thông tin và số điểm tích lũy sẽ được cộng dồn theo giá trị hóa đơn tương ứng để giảm giá vào những lần thanh toán kế tiếp.
+    +	Trong bán hàng, khi khách yêu cầu đổi trả hàng hóa thì yêu cầu khách thay bằng những sản phẩm tương đương hoặc thấp hơn số tiền đổi trả.
+-	Nghiệp vụ:
+    +	Quản lý Nhập Kho.
+    +	Quản lý Sản phẩm.
+    +	Quản lý Tài khoản.
+    +	Quản lý Nhân viên.
+    +	Quản lý Khách hàng.
+    +	Quản lý Hóa đơn. 
+    +	Quản lý Phiếu nhập.
+    +	Quản lý Nhà cung cấp.
+    +	Thống kê:
+    + Thống kê Doanh thu.
+    + Thống kê Phiếu nhập.
+    + Thống kê Hóa đơn.
 ## 1.2. Xác định yêu cầu.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/Xacdinhyeucauchucnang.png).
+-	Người sử dụng dễ dàng sử dụng phần mềm: trực quan, dễ nhìn, thao tác thuận tiện.
+-	Thông tin thống kê phải đảm báo tính chính xác, khách quan.
 # 2. Mô hình hóa.
 ## 2.1. Mô hình hóa biểu đồ chức năng (Usecase).
+### 2.1.1. Usecase Tổng quát.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseTongquat.png)
+### 2.1.2. Usecase Quản lý Tài khoản.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlytaikhoan.png)
+### 2.1.3. Usecase Quản lý Nhân viên.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlynhanvien.png)
+### 2.1.4. Usecase Quản lý Hóa đơn.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlyhoadon.png)
+### 2.1.5. Usecase Quản lý Bán hàng.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlybanhang.png)
+### 2.1.6. Usecase Quản lý Sản Phẩm.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlysanpham.png)
+### 2.1.7. Usecase Quản lý Nhập Hàng.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlynhaphang.png)
+### 2.1.8. Usecase Thống kê.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseThongke.png)
+### 2.1.9. Usecase Quản lý Khách Hàng.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlykhachhang.png)
+### 2.1.10. Usecase Quản lý Nhà Cung Cấp.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlyncc.png)
 ## 2.2. Biểu đồ cơ sở dữ liệu quan hệ(Class Diagram).
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/Classdiagram.png)
 # 3. Thiết kế giao diện.
 ## 3.1. Phác thảo giao diện
 ### 3.1.1. Giao diện Đăng nhập.
-### 3.1.2. Giao diện Chính.
-### 3.1.3. Giao diển Trang chủ - Tổng quan.
-### 3.1.4. Giao diện Bán hàng.
-### 3.1.5. Giao diện Hóa Đơn.
-### 3.1.6. Giao diện Nhập hàng.
-### 3.1.7. Giao diện Sản phẩm.
-### 3.1.8. Giao diện Nhân viên.
-### 3.1.9. Giao diện Nhà Cung Cấp.
-### 3.1.10. Giao diện Khách Hàng.
-### 3.1.11. Giao diện Thống kê Tồn Kho.
-### 3.1.12. Giao diện Thống kê Phiếu Nhập.
-### 3.1.13. Giao diện Thống kê Doanh thu.
-### 3.1.14. Giao diện Tài Khoản.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/frmdangnhap.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|PictureBox|picLogo|Hiển thị Logo của của hàng|
+|PictureBox|picShow|Ẩn hiện Mật khẩu được nhập|
+|TextBox|txtName|Nơi Nhập tên đăng nhập|
+|TextBox|txtPass|Nơi nhập mật khẩu |
+|Button|btnDangNhap|Kiểm tra mật khẩu – tên có hợp lệ không, sau đó dẫn đến giao diện chính.|
+### 3.1.2. Giao diển Trang chủ - Tổng quan.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienchinh.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Panel|pnlMain|Chứa các button chức năng chính.|
+||pnlUserControl|Không gian chứa UserControl tương ứng từng chức năng.|
+||pnlThuNgan|Chứa các chức năng Thu Ngân.|
+||pnlKhoHang|Chứa các chức năng Kho Hàng |
+||pnlQuanLi|Chứa các chức năng Quản lí.|
+||pnlThongKe|Chứa các chức năng Thống kê.|
+||pnlHeThong|Chứa các chức năng Hệ thống.|
+|PictureBox|picLogo|Logo Shop.|
+||picExit|Thoát Chương trình.|
+||picLogout|Đăng xuất.|
+|Button|btnMain|Hiển thị Trang chủ - Tổng quan.|
+||btnThuNgan|Hiển thị ra panel chứa chức năng Thu Ngân.|
+||btnBanHang|Hiển thị UsC thao tác Thanh toán với khách.|
+||btnHoaDon|Hiển thị UsC hiển thị Danh sách Hóa đơn trong CSDL.|
+||btnKhoHang|Hiển thị panel chứa chức năng trong Kho hàng.|
+||btnNhapHang|Hiển thị UsC thao tác Nhập hàng.|
+||btnSanPham|Hiển thị UsC hiển thị Danh sách Sản phẩm trong CSDL|
+||btnQuanLi|Hiển thị panel chứa các chức năng Quản lí.|
+||btnNV|Hiển thị UsC thao tác với đối tượng Nhân Viên.|
+||btnNCC|Hiển thị UsC thao tác với dối tượng Nhà Cung Cấp.|
+||btnKhachHang|Hiển thị UsC thao tác với đổi tượng Khách hàng.|
+||btnThongKe|Hiển thị panel chứa các chức năng Thống kê.|
+||btnTKTK|Hiển thị UsC thao tác để Thống kê tồn kho.|
+||btnTKPN|Hiển thị UsC thao tác để Thống kê phiếu nhập.|
+||btnTKDTHiển thị UsC thao tác để Thống kê doanh thu.|
+||btnHeThong|Hiển thị panel chứa chức năng hê thống.|
+||btnTaiKhoan|Hiển thị UsC thao tác với đối tượng Tài khoản trong hệ thống.|
+||btnNameUser|Hiển thị tên Nhân viên đang sử dụng hệ thống.|
+### 3.1.3. Giao diện Hóa Đơn.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienhoadon.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label|lblSoHD|Hiển thị tổng số hóa đơn được thanh toán trong ngày.|
+||lblSoHD|Hiển thị tổng tiền thu được trong ngày.|
+|DateEdit|dateHD|Hiển thị ngày làm cột mốc hiển thị.|
+|ChartControl|ChartSP|Hiển thị biểu đồ sản phẩm bán chạy trong ngày.|
+|PictureBox|picBill|Hiển thị ảnh Bill.|
+||picDoanhThu|Hiển thị ảnh Doanh thu.|
+### 3.1.4. Giao diện Nhập hàng.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiennhaphang.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|TextBox|txtIDPN|Chứa thông tin mã phiếu nhập|
+||tztIDNCC|Chứa thông tin mã nhà cung cấp|
+||txtIDNV|Chứa thông tin mã nhân viên|
+|PictureBox|picBoxNCC|Hiển thị danh sách nhà cung cấp|
+||picBoxNV|Hiển thị danh sách nhân viên|
+||picSearch|Tìm kiếm theo các thông tin tương ứng|
+||picReset|Reset lại thông tin được nhập|
+|Button|btnXuat|Xuất phiếu nhập|
+||btnNhap|Hiển thị giao diện nhập hàng|
+||btnXoa|Xóa phiếu được chọn|
+|DataGridView|dgvDS|Danh sách phiếu nhập.|
+### 3.1.5. Giao diện Sản phẩm.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiensanpham.png)
+### 3.1.6. Giao diện Nhân viên.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlynhanvien.png)
+### 3.1.7. Giao diện Nhà Cung Cấp.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienncc.png)
+### 3.1.8. Giao diện Khách Hàng.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienkhachhang.png)
+### 3.1.9. Giao diện Thống kê Tồn Kho.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodientonkho.png)
+### 3.1.10. Giao diện Thống kê Phiếu Nhập.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienphieunhap.png)
+### 3.1.11. Giao diện Thống kê Doanh thu.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiendoanhthu.png)
+### 3.1.12. Giao diện Tài Khoản.
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodientaikhoan.png)
 # 4. Thiết kế cơ sở dử liệu.
 ## 4.1. Thiết kế cơ sở dữ liệu.
 ## 4.2. Thiết kế lớp chi tiết.
