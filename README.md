@@ -34,7 +34,7 @@
     - 2.1.9. [Usecase Quản lý Khách Hàng.](#218-usecase-thống-kê)
     - 2.1.10. [Usecase Quản lý Nhà Cung Cấp.](#2110-usecase-quản-lý-nhà-cung-cấp)
   - 2.2. [Biểu đồ cơ sở dữ liệu quan hệ(Class Diagram).](#22-biểu-đồ-cơ-sở-dữ-liệu-quan-hệclass-diagram)
-- 3. Thiết kế giao diện.
+- 3. [Thiết kế giao diện.](#3-thiết-kế-giao-diện)
   - 3.1. Phác thảo giao diện.
     - 3.1.1. [Giao diện Đăng nhập.](#311-giao-diện-đăng-nhập)
     - 3.1.2. [Giao diển Trang chủ - Tổng quan.](#312-giao-diển-trang-chủ---tổng-quan)
@@ -48,6 +48,26 @@
     - 3.1.10. [Giao diện Thống kê Phiếu Nhập.](#3110-giao-diện-thống-kê-phiếu-nhập)
     - 3.1.11. [Giao diện Thống kê Doanh thu.](#3111-giao-diện-thống-kê-doanh-thu)
     - 3.1.12. [Giao diện Tài Khoản.](#3112-giao-diện-tài-khoản)
+- 4. [Thiết kế cơ sở dử liệu.](#4-thiết-kế-cơ-sở-dử-liệu)
+  - 4.1. [Thiết kế cơ sở dữ liệu.](#41-thiết-kế-cơ-sở-dữ-liệu)
+    - 4.1.1. [Bảng khách hàng.](#41-thiết-kế-cơ-sở-dữ-liệu)
+    - 4.1.2. [Bảng tài khoản.](#412-bảng-tài-khoản)
+    - 4.1.3. [Bảng chi tiết hóa đơn.](#413-bảng-chi-tiết-hóa-đơn)
+    - 4.1.4. [Bảng chi tiết phiếu nhập.](#414-bảng-chi-tiết-phiếu-nhập)
+    - 4.1.5. [Bảng hóa đơn.](#415-bảng-hóa-đơn)
+    - 4.1.6. [Bảng loại sản phẩm.](#416-bảng-loại-sản-phẩm)
+    - 4.1.7. [Bảng nhà cung cấp.](#417-bảng-nhà-cung-cấp)
+    - 4.1.8. [Bảng nhân viên.](#418-bảng-nhân-viên)
+    - 4.1.9. [Bảng phiếu nhập.](#419-bảng-phiếu-nhập)
+    - 4.1.10. [Bảng sản phẩm.](#4110-bảng-sản-phẩm)
+  - 4.2. [Thiết kế lớp chi tiết.](#42-thiết-kế-lớp-chi-tiết)
+- 5. [Nhận xét - đánh giá.](#5-nhận-xét---đánh-giá)
+  - 5.1. [Phần mềm – Chương trình](#51-phần-mềm--chương-trình)
+    - 5.1.1. [Chức năng đã hoàn thành.](#511-chức-năng-đã-hoàn-thành)
+    - 5.1.2. [Chức năng chưa hoàn thành – phát triển sau.](#512-chức-năng-chưa-hoàn-thành--phát-triển-sau)
+  - 5.2. [Quá trình làm việc – Việc nhóm.](#52-quá-trình-làm-việc--việc-nhóm)
+    - 5.2.1. [Phân công việc.](#521-phân-công-việc)
+    - 5.2.2. [Khó khăn.](#522-khó-khăn)
 # 1. Khảo sát hiện trạng.
 ## 1.1. Khảo sát hiện trạng.
 ### 1.1.1. Hiện trạng tổ chức.
