@@ -148,22 +148,111 @@
 |DataGridView|dgvDS|Danh sách phiếu nhập.|
 ### 3.1.5. Giao diện Sản phẩm.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiensanpham.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label|	lblID	|Hiển thị mã sản phẩm|
+||lblName	|Hiển thị tên sản phẩm|
+||lblMau|	Hiển thị màu sản phẩm|
+||lblSize|	Hiển thị Size sản phẩm|
+||lblLoaiSP|	Hiển thị loại sản phẩm|
+||lblSL	|Hiển thị số lượng sản phẩm|
+||lblTenSP1-9	|Hiển thị tên sản phẩm của các sản phẩm|
+||lblTrangThai	|Hiển thị trạng thái của sản phẩm|
+|PictureBox	|picSP	|Hiển thị hình ảnh sản phẩm|
+||Pic1-9|	Hiển thị hình ảnh sản phẩm của các sản phẩm|
+|Button	|btnUpdate	|Cập nhật thông tin sản phẩm|
+||btnNgungKD	|Chuyển trạng thái kinh doanh của sản phẩm|
+||btnThem	|Thêm 1 sản phẩm mới trong CSDL|
+||btnXoa	|Xóa sản phẩm hiện tại khỏi CSDL|
+|TextBox	|txtTimKiem	|Chứa thông tin sản phẩm cần tìm|
 ### 3.1.6. Giao diện Nhân viên.
-![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/usecaseQuanlynhanvien.png)
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiennhanvien.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label	|lblID	|Hiển thị mã Nhân viên|
+||lblName	|Hiển thị tên nhân viên|
+||lblGT	|Hiển thị giới tính Nhân viên|
+||lblNgSinh	|Hiển thị Ngày sinh Nhân viên|
+||lblSDT	|Hiển thị số điện thoại nhân viên|
+||lblDiaChi	|Hiển thị địa chỉ của nhân viên|
+||lblChucVu	|Hiển thị chức vụ của nhân viên|
+|Button	|btnUpdate	|Cập nhật thông tin nhân viên|
+||btnDel	|Xóa thông tin nhân viên|
+||btnAdd	|Thêm mới 1 nhân viên|
+|TextBox	|txtTimKiem	|Nhập thông tin nhân viên cần tìm|
+|DataGridView	|dgvDS	|Danh sách Nhân viên|
 ### 3.1.7. Giao diện Nhà Cung Cấp.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienncc.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label	|lblID	|Hiển thị mã Nhà cung cấp|
+||lblName	|Hiển thị tên Nhà cung cấp|
+||lblSDT	|Hiển thị số điện thoại Nhà cung cấp|
+||lblDiaChi	|Hiển thị địa chỉ của Nhà cung cấp|
+|Button	|btnUpdate	|Cập nhật thông tin Nhà cung cấp|
+||btnDel	|Xóa thông tin Nhà cung cấp|
+||btnAdd	|Thêm mới 1 Nhà cung cấp|
+|TextBox	|txtTimKiem	|Nhập thông tin Nhà cung cấp cần tìm|
+|DataGridView	|dgvDS	|Danh sách Nhà cung cấp|
 ### 3.1.8. Giao diện Khách Hàng.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienkhachhang.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label	|lblID	|Hiển thị mã khách hàng.|
+||lblName	|Hiển thị tên khách hàng.|
+||lblSDT	|Hiển thị số điện thoại khách hàng.|
+||lblDiemTL	|Hiển thị số điểm khách tích lũy được.|
+||lblGT	|Hiển thị giới tính của khách hàng.|
+||lblLoai	|Hiển thị loại khách hàng.|
+|Button	|btnUpdate	|Cập nhật thông tin khách hàng.|
+||btnDel	|Xóa thông tin khách hàng.|
+||btnAdd	|Thêm 1 khách hàng mới.|
+|TextBox	|txtTimKiem	|Tìm kiếm khách hàng.|
+|DataGridView	|dgvDS	|Hiển thị danh sách khách hàng.|
 ### 3.1.9. Giao diện Thống kê Tồn Kho.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodientonkho.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|ChartControl	|chartSP	|Hiển thị biểu đồ những sản phẩm nổi bật trong CSDL.|
+|DataGridView	|dgvDS	|Hiển thị danh sách sản phẩm của cửa hàng.|
+|TextBox	|txtTimKiem	|Tìm kiếm sản phẩm.|
 ### 3.1.10. Giao diện Thống kê Phiếu Nhập.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodienphieunhap.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label	|lblSL	|Hiển thị số phiếu nhập tương ứng.|
+|RadioButton	|radDate	|Hiển thị danh sách phiếu nhập trong ngày.|
+||radMonth	|Hiển thị danh sách phiếu nhập trong tháng.|
+||radYear	|Hiển thị danh sách phiếu nhập trong năm.|
+|DateEdit	|dateHD	|Ngày được chọn.|
+|DataGridView	|dgvDS	|Hiển thị danh sách phiếu nhập tương ứng.|
+|PictureBox	|picPN	|Hiển thị ảnh tương ứng.|
+|Button	|btnXuat	|Xuất file chưa danh sách phiếu nhập tương ứng.|
 ### 3.1.11. Giao diện Thống kê Doanh thu.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodiendoanhthu.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|DateEdit	|dateHD	|Hiển thị ngày thống kê tương ứng.|
+|PictureBox	|picHD	|Hiển thị ảnh tương ứng.|
+||	picDT	|Hiển thị ảnh tương ứng.|
+|Label	|lblHD	|Hiển thị số lượng hóa đơn tương ứng theo mốc.|
+||	lblDT	|Hiển thị số doanh thu đạt được tương ứng.|
+|Button	|btnXuat	|Xuất file danh sách hóa đơn trong thời gian tương ứng.|
+|DataGridView	|dgvDS	|Hiển thị danh sách hóa đơn tương ứng.|
 ### 3.1.12. Giao diện Tài Khoản.
 ![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/giaodientaikhoan.png)
+|            |Tên              |Chức năng                                         |
+|:----------:|:---------------:|:------------------------------------------------:|
+|Label	|lblName	|Hiển thị tên tài khoản|
+||lblIDNV	|Hiển thị mã nhân viên sở hữu tài khoản|
+|TextBox	|txtPass	|Chứa mật khẩu của tài khoản|
+|DataGridView	|dgvDS	|Hiển thị danh sách các tài khoản trong hệ thống|
+|Button	|btnUpdate	|Cập nhật thông tin tài khoản|
+||btnAdd	|Thêm tài khoản mới|
+||btnDel	|Xóa tài khoản được chọn|
 # 4. Thiết kế cơ sở dử liệu.
 ## 4.1. Thiết kế cơ sở dữ liệu.
+![]()
 ## 4.2. Thiết kế lớp chi tiết.
 # 5. Kiểm thử
 ## 5.1. Phân vùng.
