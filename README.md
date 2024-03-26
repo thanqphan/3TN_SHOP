@@ -16,9 +16,38 @@
 # Mục lục
 - [Tổng quan](#tổng-quan)
 - [Mục lục](#mục-lục)
-- Khảo sát hiện trạng
-- 1. [Khảo sát hiện trạng](#1-khảo-sát-hiện-trạng)
-- 2. xác định yêu cầu
+- 1. [Khảo sát hiện trạng](#1-khảo-sát-hiện-trạng).
+  - 1.1. [Khảo sát hiện trạng](#11-khảo-sát-hiện-trạng).
+    - 1.1.1. [Hiện trạng tổ chức](#111-hiện-trạng-tổ-chức).
+    - 1.1.2. [Hiện trạng nghiệp vụ](#112-hiện-trạng-nghiệp-vụ).
+  - 1.2. [Xác định yêu cầu.](#12-xác-định-yêu-cầu).
+- 2. [Mô hình hóa.](#2-mô-hình-hóa).
+  - 2.1. [Mô hình hóa biểu đồ chức năng (Usecase)](#21-mô-hình-hóa-biểu-đồ-chức-năng-usecase).
+    - 2.1.1. [Usecase Tổng quát.](#211-usecase-tổng-quát)
+    - 2.1.2. [Usecase Quản lý Tài khoản.](#212-usecase-quản-lý-tài-khoản)
+    - 2.1.3. [Usecase Quản lý Nhân viên](#213-usecase-quản-lý-nhân-viên).
+    - 2.1.4. [Usecase Quản lý Hóa đơn.](#214-usecase-quản-lý-hóa-đơn)
+    - 2.1.5. [Usecase Quản lý Bán hàng.](#215-usecase-quản-lý-bán-hàng)
+    - 2.1.6. [Usecase Quản lý Sản Phẩm.](#216-usecase-quản-lý-sản-phẩm)
+    - 2.1.7. [Usecase Quản lý Nhập Hàng.](#217-usecase-quản-lý-nhập-hàng)
+    - 2.1.8. [Usecase Thống kê.](#218-usecase-thống-kê)
+    - 2.1.9. [Usecase Quản lý Khách Hàng.](#218-usecase-thống-kê)
+    - 2.1.10. [Usecase Quản lý Nhà Cung Cấp.](#2110-usecase-quản-lý-nhà-cung-cấp)
+  - 2.2. [Biểu đồ cơ sở dữ liệu quan hệ(Class Diagram).](#22-biểu-đồ-cơ-sở-dữ-liệu-quan-hệclass-diagram)
+- 3. Thiết kế giao diện.
+  - 3.1. Phác thảo giao diện.
+    - 3.1.1. [Giao diện Đăng nhập.](#311-giao-diện-đăng-nhập)
+    - 3.1.2. [Giao diển Trang chủ - Tổng quan.](#312-giao-diển-trang-chủ---tổng-quan)
+    - 3.1.3. [Giao diện Hóa Đơn.](#313-giao-diện-hóa-đơn)
+    - 3.1.4. [Giao diện Nhập hàng.](#314-giao-diện-nhập-hàng)
+    - 3.1.5. [Giao diện Sản phẩm.](#315-giao-diện-sản-phẩm)
+    - 3.1.6. [Giao diện Nhân viên.](#316-giao-diện-nhân-viên)
+    - 3.1.7. [Giao diện Nhà Cung Cấp.](#317-giao-diện-nhà-cung-cấp)
+    - 3.1.8. [Giao diện Khách Hàng.](#318-giao-diện-khách-hàng)
+    - 3.1.9. [Giao diện Thống kê Tồn Kho.](#319-giao-diện-thống-kê-tồn-kho)
+    - 3.1.10. [Giao diện Thống kê Phiếu Nhập.](#3110-giao-diện-thống-kê-phiếu-nhập)
+    - 3.1.11. [Giao diện Thống kê Doanh thu.](#3111-giao-diện-thống-kê-doanh-thu)
+    - 3.1.12. [Giao diện Tài Khoản.](#3112-giao-diện-tài-khoản)
 # 1. Khảo sát hiện trạng.
 ## 1.1. Khảo sát hiện trạng.
 ### 1.1.1. Hiện trạng tổ chức.
@@ -252,21 +281,120 @@
 ||btnDel	|Xóa tài khoản được chọn|
 # 4. Thiết kế cơ sở dử liệu.
 ## 4.1. Thiết kế cơ sở dữ liệu.
-![]()
+![](https://github.com/thanqphan/3TN_SHOP/blob/master/GUI/Resources/csdl.png)
+### 4.1.1. Bảng khách hàng.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaKH	              |Mã Khách hàng	                |Varchar(20)		     |Khóa chính             |
+|HoTen	|Họ và tên Khách hàng	|Nvarchar(50)||	
+|DiemTichLuy	|Điểm tích lũy của Khách hàng	|Int|	|
+|SDT	|Số điện thoại của Khách hàng	|Varchar(12)|	|
+|GioiTinh	|Giới tính khách hàng	|Nvarchar(20)||
+### 4.1.2. Bảng tài khoản.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|TenTK	|Tên tài khoản	|Varchar(20)	|Khóa chính|
+|MatKhau	|Mật khẩu tài khoản	|Varchar(20)||	
+|MaNV	|Mã nhân viên thuộc tài khoản	|Varchar(20)	|ID nằm trong dto.NHANVIEN|
+### 4.1.3. Bảng chi tiết hóa đơn.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaHD	|Mã Hóa đơn	|Varchar(20)|	ID tồn tại trong dto.HOADON|
+|MaSP	|Mã Sản phẩm	Varchar(20)|	ID tồn tại tring dto.SANPHAM|
+|DonGia	|Đơn giá của 1 sản phẩm	|Money||	
+|SoLuongBan	|Số lượng sản phẩm được bán	|int	||
+### 4.1.4. Bảng chi tiết phiếu nhập.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaPN	|Mã Phiếu nhập	|Varchar(20)	|ID tồn tại trong dto.PHIEUNHAP|
+|MaSP	|Mã Sản phẩm	|Varchar(20)	|ID tồn tại tring dto.SANPHAM|
+|SoLuongNhap	|Số lượng sản phẩm được nhập	|Int||	
+|TongTien	|Tổng thành tiền sản phẩm được nhập	|money	||
+### 4.1.5. Bảng hóa đơn.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaHD	|Mã Phiếu nhập	|Varchar(20)	|Khóa chính|
+|NgLap	|Mã Sản phẩm	|Date	||
+|MaKH	|Mã Khách hàng	|Varchar(20)	|ID tồn tại tring dto.KHACHHANG|
+|MaNV	|Mã Nhân viên	|Varchar(20)	|ID tồn tại tring dto.NHANVIEN|
+|TongSL	|Tổng số lượng mua	|Int||	
+|TongThanhTien	|Tổng thành tiền 	|Money	||
+|TienGiamGia	|Tiền giảm giá dựa vào điểm tích lũy	|Money||	
+|TongTien	|Thành tiền cuối cùng	|money	||
+### 4.1.6. Bảng loại sản phẩm.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaLoaiSP	|Mã loại sản phẩm	|Varchar(20)	|Khóa chính|
+|TenLoaiSP	|Tên loại sản phẩm	|Nvarchar(50)||	
+### 4.1.7. Bảng nhà cung cấp.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaNCC	|Mã nhà cung cấp	|Varchar(20)	|Khóa chính|
+|TenNCC	|Tên nhà cung cấp	|Nvarchar(50)||	
+|DiaChi	|Địa chỉ nhà cung cấp	|Nvarchar(50)	||
+|SDT	|Điện thoại liên lạc nhà cung cấp	|Varchar(12)	||
+|TrangThai	|Trạng thái hợp tác của nhà cung cấp	|Nvarchar(20)||	
+### 4.1.8. Bảng nhân viên.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaNV	|Mã nhân viên	|Varchar(20)	|Khóa chính|
+|HoTen	|Họ và tên nhân viên	|Nvarchar(50)	||
+|DiaChi|	Địa chỉ nhân viên 	|Nvarchar(50)	||
+|SDT	|Số điện thoại liên lạc	|Varchar(12)||	
+|GT	|Giới tính nhân viên	|Nvarchar(10)	||
+|NgSinh	|Ngày sinh nhân viên	|Date	||
+|ChucVu	|Chức vụ nhân viên	|Nvarchar(30)	||
+### 4.1.9. Bảng phiếu nhập.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaPN	|Mã phiếu nhập	|Varchar(20)	|Khóa chính|
+|NgLap	|Ngày lập phiếu nhập	|Date	||
+|MaNCC	|Mã nhà cung cấp	|Varchar(20)	|ID nằm trong dto.NHACUNGCAP|
+|MaNV	|Mã nhân viên	|Varchar(20)|	ID nằm trong dto.NHANVIEN|
+|TongSL	|Tổng số lượng sản phẩm nhập vào	|Int	||
+|TongThanhTien	|Tổng tiền nhập 	|Money	||
+|GiaTrietKhau	|Phần trăm triết khấu nhập	|Varchar(20)	||
+|TongTienNhap	|Tổng tiền nhập	|Money||	
+|Note	|Ghi chú liên quan đến nhập hàng	|Nvarchar(max)||	
+### 4.1.10. Bảng sản phẩm.
+|Tên thuộc tính     |Diễn giải                      |Kiểu dữ liệu        |Ràng buộc              |
+|:-----------------:|:-----------------------------:|:------------------:|:---------------------:|
+|MaSP	|Mã sản phẩm	|Varchar(20)|	Khóa chính|
+|TenSP	|Tên sản phẩm	|Nvarchar(50)	||
+|MauSP	|Màu sản phẩm 	|Nvarchar(20)||	
+|SizeSP	|Size sản phẩm	|Varchar(10)	||
+|DonGia	|Đơn giá sản phẩm 	|Money||	
+|MaLoaiSP	|Mã loại sản phẩm	|Varchar(20)	|ID nằm trong dto.SANPHAM|
+|SoLuongKho 	|Số lượng sản phẩm trong kho	|Int	||
+|TrangThai	|Trạng thái của sản phẩm	|Nvarchar(20)	||
 ## 4.2. Thiết kế lớp chi tiết.
-# 5. Kiểm thử
-## 5.1. Phân vùng.
-### 5.1.1. Mật khẩu Tài Khoản.
-### 5.1.2. Ngày sinh Nhân viên.
-### 5.1.3. Điểm tích lũy Khách hàng.
-## 5.2. Test case – Đoán lỗi.
-### 5.2.1. Testcase Đăng nhập.
-### 5.2.2. Test case Thêm Nhân Viên.
-### 5.2.3. Test case Thêm Tài khoản.
-# 6. Nhận xét - đánh giá.
-## 6.1. Phần mềm – Chương trình
-### 6.1.1. Chức năng đã hoàn thành.
-### 6.1.2. Chức năng chưa hoàn thành – phát triển sau.
-## 6.2. Quá trình làm việc – Việc nhóm.
-### 6.2.1. Phân công việc.
-### 6.2.2. Khó khăn.
+-	Sử dụng mô hình 3 lớp và xây dựng:
+ - **Presentation Layer**: Lớp này làm nhiệm vụ giao tiếp với người dùng cuối để thu thập dữ liệu và hiển thị kết quả/dữ liệu thông qua các thành phần trong giao diện người sử dụng.
+ - **Business Logic Layer**: Lớp này thực hiện các nghiệp vụ chính của hệ thống, sử dụng các dịch vụ do lớp Data Access cung cấp, và cung cấp các dịch vụ cho lớp Presentation.
+ - **Data Access Layer**: Lớp này thực hiện các nghiệp vụ liên quan đến lưu trữ và truy xuất dữ liệu của ứng dụng.
+# 5. Nhận xét - đánh giá.
+## 5.1. Phần mềm – Chương trình
+### 5.1.1. Chức năng đã hoàn thành.
+-	Các chức năng : Thêm, Xóa, Sửa, Tìm kiếm.
+-	Report in hóa đơn, Report phiếu nhập.
+-	Xuất file .excel Thống kê Doanh thu, phiếu nhập, hóa đơn.
+-	Phân quyền đăng nhập.
+-	Tính % giảm giá của khách hàng theo điểm tích lũy.
+-	Thanh toán
+### 5.1.2. Chức năng chưa hoàn thành – phát triển sau.
+-	Tích điểm sau Thanh toán.
+-	Khách hàng sử dụng trực tiếp phần mềm.
+-	Tính lương cho Nhân viên.
+## 5.2. Quá trình làm việc – Việc nhóm.
+### 5.2.1. Phân công việc.
+|Thông tin thành viên     |Nội dung công việc thực hiện                      |Hoàn thành|Tham gia |
+|:-----------------------:|:------------------------------------------------:|:--------:|:-------:|
+|Phan Anh Thăng 2011069025	|Hoàn thiện Usecase Diagram.Thiết kế giao diện form liên quan.Thiết kế Database.Lập trình – Code:Chuẩn bị solution theo mô hình 3 tier.frmMainusctrlThuNganusctrlNhanVienusctrlHeThong-frmTaiKhoanTham gia kiểm thử phần mềm.Hoàn thành file Document – Báo cáo.	|100%	|25%|
+|Vũ Lê Anh Thi 2011061865	|Hoàn thiện Activity Diagram.Thiết kế giao diện form liên quan.Thiết kế Database.Lập trình - Code:UsctrlDoanhThu, UsctrlTongQuan. UsctrlSanPham.ReportPhieuNhap.Thống kê PhieuNhap.Thống kê NhapHang.Tham gia kiểm thử phần mềm.	|100%	|25%|
+|Huỳnh Thị Trúc Ngân 2011064432	|Hoàn thiện Sequence Diagram.Thiết kế Database.Lập trình – Code:usctrlHoaDonustrlKhachHangustrlPhieuNhapTạo reportHoaDonTham gia kiểm thử phần mềm.Chuẩn bị .pptx thuyết trình.	|100%	|25%|
+|Ngô Hoài Phát Tấn 2011110597	|Phác thảo giao diện phần mềm.Thiết kế Database.Lập trình – Code:usctrlNhaCungCapTham gia kiểm thử phần mềm.	|100%	|25%|
+### 5.2.2. Khó khăn.
+-	Thời gian meeting để phân chia công việc chưa được thống nhất: mất thời gian, vấn đề công việc không được truyền đạt.
+-	Khả năng thành viên trong team có chênh lệch.
+-	Giai đoạn chuyển giao file bị trục trặc do sử dụng cách phổ thông: gửi file nén.
+
