@@ -35,7 +35,7 @@
     - 2.1.10. [Usecase Quản lý Nhà Cung Cấp.](#2110-usecase-quản-lý-nhà-cung-cấp)
   - 2.2. [Biểu đồ cơ sở dữ liệu quan hệ(Class Diagram).](#22-biểu-đồ-cơ-sở-dữ-liệu-quan-hệclass-diagram)
 - 3. [Thiết kế giao diện.](#3-thiết-kế-giao-diện)
-  - 3.1. Phác thảo giao diện.
+  - 3.1. [Phác thảo giao diện.](#31-phác-thảo-giao-diện)
     - 3.1.1. [Giao diện Đăng nhập.](#311-giao-diện-đăng-nhập)
     - 3.1.2. [Giao diển Trang chủ - Tổng quan.](#312-giao-diển-trang-chủ---tổng-quan)
     - 3.1.3. [Giao diện Hóa Đơn.](#313-giao-diện-hóa-đơn)
