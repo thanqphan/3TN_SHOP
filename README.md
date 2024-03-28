@@ -4,10 +4,10 @@
   - Mô tả: Quản lý cho một cửa hàng thời trang
   - GVHD: **ThS. Nguyễn Hữu Trung**.
 + Thành viên:
-  - [Phan Anh Thăng](https://github.com/thanqphan) MSSV: 2011069025
-  - [Vũ Lê Anh Thi](https://github.com/Anhthi0210) MSSV: 2011061865
-  - [Huỳnh Thị Trúc Ngân](https://github.com/tNgan23) MSSV: 2011064432
-  - Ngô Hoài Phát Tấn MSSV: 2011110597
+  - [Phan Anh Thăng](https://github.com/thanqphan) MSSV: 2011069025.
+  - [Vũ Lê Anh Thi](https://github.com/Anhthi0210) MSSV: 2011061865.
+  - [Huỳnh Thị Trúc Ngân](https://github.com/tNgan23) MSSV: 2011064432.
+  - [Ngô Hoài Phát Tấn MSSV](https://github.com/TanProxy) MSSV: 2011110597.
 + Công nghệ:
   - Ngôn ngữ: C#
   - Môi trường: .Net Framework 4.6
